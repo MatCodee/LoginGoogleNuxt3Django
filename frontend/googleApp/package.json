@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -8,15 +9,13 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@sidebase/nuxt-auth": "^0.6.7",
-    "autoprefixer": "^10.4.14",
-    "nuxt": "^3.3.2",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
-  },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "next-auth": "^4.24.5"
+    "next-auth": "^4.24.5",
+    "nuxt": "^3.10.1",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@sidebase/nuxt-auth": "^0.6.7"
   }
 }

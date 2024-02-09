@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import GoogleProvider from "next-auth/providers/google";
+
+
 export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
     postcss: {
@@ -10,11 +13,12 @@ export default defineNuxtConfig({
     buildModules: [
       '@nuxtjs/axios'
     ],
-    modules: [
-      'nuxt-vue3-google-signin'
-    ],
-    googleSignIn: {
-      clientId: "73830782968-obklojqj3oh6fnvuma60eqednganv1hl.apps.googleusercontent.com",
-      //clientId: process.env.cliendID,
-    }
+    modules: ['@sidebase/nuxt-auth'],
+    auth: {
+      provider: {
+        provider: {
+          type: 'authjs'
+        }
+      }
+    },
 })
